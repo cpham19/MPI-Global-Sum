@@ -1,0 +1,9 @@
+mpicc -o mpi_hello mpi_hello.c
+
+mpiexec --hostfile hostfile -n 20 ./mpi_hello
+
+
+mpicc  -g -Wall -o mpi_globalsum mpi_globalsum.c
+
+mpiexec --hostfile hostfile -n 12 ./mpi_globalsum
+
